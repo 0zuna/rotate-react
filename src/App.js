@@ -17,7 +17,7 @@ const App = () => {
 			<div className='container'>
 				<div id='carousel'>
 				{cards.map((c,i)=>
-					<Card name={c.name} sub={c.sub} url={c.url}/>
+					<Card key={i} name={c.name} sub={c.sub} url={c.url}/>
 				)}
 				</div>
 			</div>
