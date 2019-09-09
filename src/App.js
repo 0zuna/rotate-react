@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import './App.css'
+import Card from './Card'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+
+	const [cards, setCards]=useState([
+		{name:'Kumi',sub:'Japanese',url:'http://lorempixel.com/200/201/people'},
+		{name:'Sayuri',sub:'Japanese',url:'http://lorempixel.com/200/202/people'},
+		{name:'Haruka',sub:'Japanese',url:'http://lorempixel.com/200/203/people'},
+		{name:'Aiko',sub:'Japanese',url:'http://lorempixel.com/200/204/people'},
+		{name:'Ayaka',sub:'Japanese',url:'http://lorempixel.com/200/205/people'},
+	])
+
+	return (
+		<div className='App'>
+			<div className='container'>
+				<div id='carousel'>
+				{cards.map((c,i)=>
+					<Card name={c.name} sub={c.sub} url={c.url}/>
+				)}
+				</div>
+			</div>
+		</div>
+	)
 }
 
-export default App;
+export default App
