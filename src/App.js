@@ -10,6 +10,7 @@ const App = () => {
 		{name:'Haruka',sub:'Japanese',url:'http://lorempixel.com/200/203/people'},
 		{name:'Aiko',sub:'Japanese',url:'http://lorempixel.com/200/204/people'},
 		{name:'Ayaka',sub:'Japanese',url:'http://lorempixel.com/200/205/people'},
+		{name:'Kasumi',sub:'Japanese',url:'http://lorempixel.com/200/205/people'},
 	])
 
 	return (
